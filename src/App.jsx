@@ -9,24 +9,32 @@ export default function App() {
 
   return (
     <main className="flex flex-col items-center justify-start w-screen h-screen">
-      <div className="w-[100%]">
-        <img src={hero} alt="hero-img" className="w-[100%]" />
+      <div className="flex items-center justify-center w-[100%] h-[40%]">
+        <img
+          src={hero}
+          alt="hero-img"
+          className="w-full object-cover h-full rounded-b-3xl "
+        />
       </div>
-      <div>
+      <div className="flex flex-col items-start justify-start  w-full px-[40px]">
         <div className="header flex flex-col items-start justify-start p-4">
-          <h1 className="text-[2rem] font-bold">Stay updated</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <h1 className=" text-gray-700 text-[3rem] font-bold mb-5">
+            Stay updated!
+          </h1>
+          <p className=" text-gray-700 mb-5 font-medium text-lg w-[22rem]">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
         </div>
         <div className="mid flex flex-col mb-4">
           {itemMassage.map((item) => (
             <div
               key={item.id}
-              className="flex items-start justify-start mb-2 gap-2"
+              className="flex items-start justify-start mb-3 gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="currentColor"
+                fill="#FF5F58"
                 className="w-6 h-6"
               >
                 <path
@@ -36,18 +44,20 @@ export default function App() {
                 />
               </svg>
 
-              <p>{item.message}</p>
+              <p className=" text-gray-700 font-normal text-lg">
+                {item.message}
+              </p>
             </div>
           ))}
         </div>
         <div className="gap-[0.4rem] flex flex-col items-start justify-center w-[100%]">
-          <label>Email address</label>
+          <label className="font-bold">Email address</label>
           <input
             type="email"
             placeholder="email@company.com"
-            className="w-full h-[50px] px-7 border-slate-300 border-2 border-solid rounded-lg mb-4"
+            className="w-full h-[50px] px-7 py-8 text-[1.2rem] border-slate-300 border-2 border-solid rounded-lg mb-4"
           />
-          <button className="w-full rounded-lg text-slate-100 bg-slate-800 px-3 py-6">
+          <button className="w-full rounded-lg text-slate-100 bg-slate-800 px-3 py-5 text-xl font-bold">
             Subscribe to monthly newsletter
           </button>
         </div>
