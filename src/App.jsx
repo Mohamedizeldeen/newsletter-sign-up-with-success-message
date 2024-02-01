@@ -8,16 +8,16 @@ export default function App() {
   ];
 
   return (
-    <main className="flex flex-col items-center justify-start  h-screen ">
-      <div className="flex items-center justify-center w-[100%] h-[40%]">
+    <main className="flex flex-col items-center justify-start  h-screen sm:flex-row sm:px-[20rem]">
+      <div className="flex items-center justify-center w-[100%] h-[40%] sm:h-[80%] sm:w-[40%] sm:order-2 ">
         <img
           src={hero}
           alt="hero-img"
-          className="w-full object-cover h-full rounded-b-3xl "
+          className="w-full object-cover h-full rounded-b-3xl sm:rounded-lg "
         />
       </div>
-      <div className="flex flex-col items-center justify-start  w-full px-[40px]">
-        <div className="header flex flex-col items-start justify-start p-4">
+      <div className="flex flex-col items-center justify-start  w-full px-[40px] sm:w-[60%] sm:items-start">
+        <div className="header flex flex-col items-start justify-start p-4 sm:p-0">
           <h1 className=" text-gray-700 text-[3rem] font-bold mb-5">
             Stay updated!
           </h1>
